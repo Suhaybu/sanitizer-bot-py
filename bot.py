@@ -5,7 +5,7 @@ import discord
 from discord.ext import commands
 
 from settings import BOT_TOKEN
-from utils.cogs_loader import print_cog_status
+from utils.print_cog_status import print_cog_status
 
 intents = discord.Intents.default()
 discord.Intents.message_content = True
@@ -23,7 +23,7 @@ async def load_cogs():
         if cog_name.endswith('.py'):
             try:
                 await bot.load_extension(f'cogs.{cog_name[:-3]}')
-                loaded_cogs.append(cog_name[-3])
+                loaded_cogs.append(cog_name[:-3])
             except Exception as e:
                 faulty_cogs.append(cog_name[:-3])
 

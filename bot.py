@@ -7,8 +7,7 @@ from discord.ext import commands
 from settings import BOT_TOKEN
 from utils.print_cog_status import print_cog_status
 
-intents = discord.Intents.default()
-discord.Intents.message_content = True
+intents = discord.Intents.all()
 
 bot = commands.Bot(
     command_prefix=commands.when_mentioned_or('!'), intents=intents
@@ -32,7 +31,7 @@ async def load_cogs():
 
 async def main():
     async with bot:
-        print('(1/2) Starting the bot and loading cogs')
+        print('(1/2) Bot is starting up and loading cogs')
         await load_cogs()
         await bot.start(BOT_TOKEN)
 

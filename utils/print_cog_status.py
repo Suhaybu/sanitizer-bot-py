@@ -1,5 +1,5 @@
 # Handles console message for cog load status
-def cog_status(loaded_cogs, faulty_cogs):
+def print_cog_status(loaded_cogs, faulty_cogs):
     total_cogs = len(loaded_cogs) + len(faulty_cogs)
 
     if total_cogs == 0:

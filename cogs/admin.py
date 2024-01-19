@@ -7,7 +7,7 @@ class Admin(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    # $sync: sync slash commands (Prefix)
+    # Prefix: sync slash commands (Prefix)
     @commands.command(
         name='sync',
         aliases=['Sync'],
@@ -21,19 +21,37 @@ class Admin(commands.Cog):
         synced = await self.bot.tree.sync()
 
         if not synced:
-            print(
-                'No commands were synced. Please make sure the cogs are loaded.'
-            )
+            message = 'No commands were synced. Please make sure the cogs were correctly loaded.'
         else:
-            print(f'Successfully synced {synced} command(s)')
+            message = f"Successfully synced {len(synced)} command's."
+            if len(synced) == 1:
+                message = message[:-3] + '.'
 
+        await ctx.message.reply(message)
+        print(message)
+
+    # TODO: Need to convert this into a hybrid command
     # /sync: sync slash commands
-    # @app_commands.command(
-    #     name='sync', description='Requests all slash commands to sync.'
-    # )
-    # @app_commands.checks.is_owner()
-    # async def ssync(self, interaction: discord.Interaction):
-    #     ...
+    @app_commands.command(
+        name='sync', description='Requests all slash commands to sync.'
+    )
+    # TODO: Make it exclusive for the Owner
+    # @app_commands.is_owner()
+    async def ssync(self, interaction: discord.Interaction):
+        print(
+            f'User {interaction.user.name} ({interaction.user.id}) used /sync command'
+        )
+        synced = await self.bot.tree.sync()
+
+        if not synced:
+            message = 'No commands were synced. Please make sure the cogs were correctly loaded.'
+        else:
+            message = f"Successfully synced {len(synced)} command's."
+            if len(synced) == 1:
+                message = message[:-3] + '.'
+
+        await interaction.response.send_message(message, ephemeral=True)
+        print(message)
 
 
 async def setup(bot):

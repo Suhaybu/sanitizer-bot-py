@@ -15,11 +15,17 @@ class Admin(commands.Cog):
     )
     @commands.is_owner()
     async def sync(self, ctx):
-        # ctx.send(
-        #     f'User {ctx.author.name} ({ctx.author.id}) used Prefix Sync command'
-        # )
+        print(
+            f'User {ctx.author.name} ({ctx.author.id}) used Prefix Sync command'
+        )
         synced = await self.bot.tree.sync()
-        print(f'Successfully synced {synced} command(s)')
+
+        if not synced:
+            print(
+                'No commands were synced. Please make sure the cogs are loaded.'
+            )
+        else:
+            print(f'Successfully synced {synced} command(s)')
 
     # /sync: sync slash commands
     # @app_commands.command(

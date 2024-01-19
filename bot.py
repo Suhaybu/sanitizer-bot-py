@@ -6,12 +6,15 @@ from discord.ext import commands
 
 from settings import BOT_TOKEN
 from utils.print_cog_status import print_cog_status
+from utils.setup_logger import setup_logger
 
 intents = discord.Intents.all()
 
 bot = commands.Bot(
     command_prefix=commands.when_mentioned_or('!'), intents=intents
 )
+
+logger = setup_logger()
 
 
 async def load_cogs():
@@ -31,16 +34,18 @@ async def load_cogs():
 
 async def main():
     async with bot:
-        print('(1/2) Bot is starting up and loading cogs')
+        print('┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓')
+        print('┃           Bot is starting up and loading cogs...           ┃')
+        print('┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛')
         await load_cogs()
         await bot.start(BOT_TOKEN)
 
 
 @bot.event
 async def on_ready():
-    print(
-        f'(2/2) Sanitizer Bot is Online! Discord version: {discord.__version__}'
-    )
+    print('┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓')
+    print('┃                  Sanitizer Bot is Online!                  ┃')
+    print('┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛')
     await bot.change_presence(
         activity=discord.Activity(
             type=discord.ActivityType.listening,

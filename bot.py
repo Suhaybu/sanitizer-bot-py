@@ -1,3 +1,7 @@
+'''
+This is the main file where the bot starts from.
+'''
+
 import asyncio
 import os
 

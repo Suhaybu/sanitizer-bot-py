@@ -30,7 +30,7 @@ class Admin(commands.Cog):
         await ctx.message.reply(message)
         print(message)
 
-    # TODO: Need to convert this into a hybrid command
+    # TODO: Need to convert both sync commands into a hybrid command
     # /sync: sync slash commands
     @app_commands.command(
         name='sync', description='Requests all slash commands to sync.'

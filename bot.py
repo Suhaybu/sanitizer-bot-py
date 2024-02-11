@@ -14,7 +14,7 @@ from utils.setup_logger import setup_logger
 
 intents = discord.Intents.all()
 
-bot = commands.Bot(command_prefix=commands.when_mentioned_or('!'), intents=intents)
+bot = commands.Bot(command_prefix=commands.when_mentioned_or('!!!'), intents=intents)
 
 logger = setup_logger()
 
@@ -36,24 +36,21 @@ async def load_cogs():
 
 async def main():
 	async with bot:
-		print('┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓')
-		print('┃           Bot is starting up and loading cogs...           ┃')
-		print('┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛')
+		print('#--------  Bot is starting up and loading cogs...  ----------#')
 		await load_cogs()
 		await bot.start(BOT_TOKEN)
 
 
 @bot.event
 async def on_ready():
-	print('┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓')
-	print('┃                  Sanitizer Bot is Online!                  ┃')
-	print('┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛')
 	await bot.change_presence(
 		activity=discord.Activity(
 			type=discord.ActivityType.listening,
-			name='!help',
+			name='!!!help',
 		)
 	)
+
+	print('#----------        Sanitizer Bot is Online!        ----------#')
 
 
 asyncio.run(main())

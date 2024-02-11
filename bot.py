@@ -14,7 +14,7 @@ from utils.setup_logger import setup_logger
 
 intents = discord.Intents.all()
 
-bot = commands.Bot(command_prefix=commands.when_mentioned_or('!!!'), intents=intents)
+bot = commands.Bot(command_prefix=commands.when_mentioned_or('!!'), intents=intents)
 
 logger = setup_logger()
 
@@ -46,7 +46,7 @@ async def on_ready():
 	await bot.change_presence(
 		activity=discord.Activity(
 			type=discord.ActivityType.listening,
-			name='!!!help',
+			name='!!help',
 		)
 	)
 

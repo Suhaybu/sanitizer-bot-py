@@ -28,7 +28,7 @@ class Twitter(commands.Cog):
 			tweet_author, link_data = match.groups()
 			bot_response = f'[@{tweet_author} via {service}]({fixup_url}{link_data})'
 
-			await message.add_reaction('<:sanitized:1206376642042138724>')
+			await message.add_reaction('<:Sanitized:1206376642042138724>')
 			await message.reply(bot_response, mention_author=False)
 			await message.edit(suppress=True)
 

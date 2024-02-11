@@ -22,9 +22,9 @@ class Instagram(commands.Cog):
 			elif type == 'p':
 				type_printed = 'Post'
 
-			response = f'[{type_printed} via Instagram](https://www.instagramez.com/{type}/{url_data})'
+			bot_response = f'[{type_printed} via Instagram](https://www.instagramez.com/{type}/{url_data})'
 
-			await message.reply(response, mention_author=False)
+			await message.reply(bot_response, mention_author=False)
 			await message.edit(suppress=True)
 
 

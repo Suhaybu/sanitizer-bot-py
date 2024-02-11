@@ -26,11 +26,12 @@ class Twitter(commands.Cog):
 
 		if match:
 			tweet_author, link_data = match.groups()
-			response = f'[@{tweet_author} via {service}]({fixup_url}{link_data})'
+			bot_response = f'[@{tweet_author} via {service}]({fixup_url}{link_data})'
 
-			await message.reply(response, mention_author=False)
+			await message.reply(bot_response, mention_author=False)
 			await message.edit(suppress=True)
 
 
 async def setup(bot):
 	await bot.add_cog(Twitter(bot))
+\<:sanitized:1206376642042138724>

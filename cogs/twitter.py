@@ -34,4 +34,3 @@ class Twitter(commands.Cog):
 
 async def setup(bot):
 	await bot.add_cog(Twitter(bot))
-\<:sanitized:1206376642042138724>

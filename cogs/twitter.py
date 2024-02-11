@@ -26,7 +26,7 @@ class Twitter(commands.Cog):
 
 		if match:
 			tweet_author, link_data = match.groups()
-			response = f'[@{tweet_author}, via {service}]({fixup_url}{link_data})'
+			response = f'[@{tweet_author} via {service}]({fixup_url}{link_data})'
 
 			await message.reply(response, mention_author=False)
 			await message.edit(suppress=True)

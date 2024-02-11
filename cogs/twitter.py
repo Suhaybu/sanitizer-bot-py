@@ -12,8 +12,8 @@ class Twitter(commands.Cog):
 		if message.author == self.bot.user:
 			return
 
-		twitter_regex = r'https?:\/\/twitter\.com\/(\w+)(\/status\/\S*)'
-		x_regex = r'https?:\/\/x\.com\/(\w+)(\/status\/\S*)'
+		twitter_regex = r'https?:\/\/(?:www\.)?twitter\.com\/(\w+)(\/status\/\S*)'
+		x_regex = r'https?:\/\/(?:www\.)?x\.com\/(\w+)(\/status\/\S*)'
 
 		match = re.search(twitter_regex, message.content)
 		service = 'Twitter'

@@ -24,6 +24,7 @@ class Tiktok(commands.Cog):
 			author_username = api_response['details']['author']['username']
 			bot_response = f'[@{author_username} via TikTok]({quickvids_url})'
 
+			await message.add_reaction('<:sanitized:1206376642042138724>')
 			await message.reply(bot_response, mention_author=False)
 			await message.edit(suppress=True)
 

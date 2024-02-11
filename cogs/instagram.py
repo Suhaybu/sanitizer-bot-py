@@ -24,6 +24,7 @@ class Instagram(commands.Cog):
 
 			bot_response = f'[{type_printed} via Instagram](https://www.instagramez.com/{type}/{url_data})'
 
+			await message.add_reaction('<:sanitized:1206376642042138724>')
 			await message.reply(bot_response, mention_author=False)
 			await message.edit(suppress=True)
 

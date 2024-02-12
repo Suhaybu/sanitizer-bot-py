@@ -12,7 +12,8 @@ from settings import BOT_TOKEN
 from utils.print_cog_status import print_cog_status
 from utils.setup_logger import setup_logger
 
-intents = discord.Intents.all()
+intents = Intents.default()
+intents.message_content = True
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or('!!'), intents=intents)
 

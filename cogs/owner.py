@@ -9,7 +9,7 @@ class Owner(commands.Cog):
 	@commands.command(name='sync', description='Requests all slash commands to sync.')
 	@commands.is_owner()
 	async def sync(self, ctx):
-		print(f'User {ctx.author.name} ({ctx.author.id}) used Prefix Sync command')
+		# print(f'User {ctx.author.name} ({ctx.author.id}) used Prefix Sync command')
 		synced = await self.bot.tree.sync()
 
 		if not synced:

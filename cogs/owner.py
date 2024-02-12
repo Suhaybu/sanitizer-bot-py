@@ -6,11 +6,7 @@ class Owner(commands.Cog):
 		self.bot = bot
 
 	# Prefix: sync slash commands (Prefix)
-	@commands.command(
-		name='sync',
-		aliases=['Sync'],
-		description='Requests all slash commands to sync.',
-	)
+	@commands.command(name='sync', description='Requests all slash commands to sync.')
 	@commands.is_owner()
 	async def sync(self, ctx):
 		print(f'User {ctx.author.name} ({ctx.author.id}) used Prefix Sync command')

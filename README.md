@@ -86,6 +86,7 @@ Suhayb - [@suhayb_u](https://twitter.com/suhayb_u)
 Project Link: [https://github.com/suhaybu/sanitizer-bot](https://github.com/suhaybu/sanitizer-bot)
 
 ## Acknowledgments
-
--   [discord.py](https://discordpy.readthedocs.io/en/stable/)
--   And anyone who contributes to this project!
+-   [interactions.py](https://github.com/interactions-py/interactions.py)
+-   **Twitter:** Thanks to FixTweet's awesome [FxTwitter](https://github.com/FixTweet/FxTwitter) project
+-   **Instagram:** Thanks to [Embedez](https://embedez.com/) reliable service
+-   **TikTok:** Thanks to [QuickVids](https://quickvids.win/) super fast API

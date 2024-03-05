@@ -4,7 +4,7 @@
 
 TODO
 
-The bot is developed in Python using the `discord.py` library. A private GitHub repo is utilized for version control and the assistance of GitHub Copilot is used in this project for debugging and additional advice.
+The bot is developed in Python using the `interactions.py` library. A private GitHub repo is utilized for version control and the assistance of GitHub Copilot is used in this project for debugging and additional advice.
 
 **Note:**
 

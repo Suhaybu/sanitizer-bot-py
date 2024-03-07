@@ -25,6 +25,6 @@ class Twitter(Extension):
 
 			await event.message.add_reaction('<:Sanitized:1206376642042138724>')
 			await event.message.reply(
-				bot_response, allowed_mention=AllowedMentions.none()
+				bot_response, allowed_mentions=AllowedMentions.none()
 			)
 			await event.message.suppress_embeds()

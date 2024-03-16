@@ -17,7 +17,7 @@ class Instagram(Extension):
 			elif type == 'p':
 				type_printed = 'Post'
 
-			bot_response = f'[{type_printed} via Instagram](https://www.instagramez.com/{type}/{url_data})'
+			bot_response = f'[{type_printed} via Instagram](https://www.ddinstagram.com/{type}/{url_data})'
 			# no_reply = AllowedMentions.none()
 			await event.message.add_reaction('<:Sanitized:1206376642042138724>')
 			await event.message.reply(

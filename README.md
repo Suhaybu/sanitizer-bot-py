@@ -1,28 +1,35 @@
 # Sanitizer-bot
 
+[![](https://img.shields.io/pypi/v/discord-py-interactions.svg?label=Interactions.py&logo=pypi)](https://github.com/interactions-py/interactions.py)
+![](https://img.shields.io/badge/Python-3.12+-1081c1?logo=python)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![License](https://img.shields.io/badge/license-CC0_1.0-v1)](https://github.com/Suhaybu/Sanitizer-bot/blob/main/LICENSE)
+
+
 ## Introduction
 
-TODO
+Sanitizer is a simple bot that uses regex to identify links for social platforms and replaces them with discord embed friendly links that allows you to view the content of the link without ever having to leave the discord app. You might think this is a bot for lazy people, but I assure you, if you give it a try, you'll never want to go back.
 
-The bot is developed in Python using the `interactions.py` library. A private GitHub repo is utilized for version control and the assistance of GitHub Copilot is used in this project for debugging and additional advice.
-
-**Note:**
+The bot is developed in Python using the `interactions.py` library. Click [here](https://github.com/interactions-py/interactions.py) for their GitHub repo. This GitHub repo is utilized for version control and the assistance of GitHub Copilot has been used for creating examples of implementation from documentations.
 
 ## TODO
 
--   Finish the readme
--   A lot of stuff with the bot
+-   Add Reddit Support
+-   Add User Installable commandds
 
 ## Features
 
--   **Feature 1:** Example description.
--   **Feature 2:** Example description.
+-   **Supports Multiple platforms:** Currently works with Twitter, TikTok, Instagram. More to come!
+-   **Automatic conversion:** Automatically fixes links from any of the supported platforms.
+-   **Deleted original embed:** After successfully replying to the original message with fixed embed, automatically deletes original broken embed.
+-   **Implemented QuickTock API:** Implemented QuickTock API to convert TikTok links into embeddable content in discord.
+-   **Handels DMs:** You can DM Sanitizer with the link you want for it to convert.
 
 ## Getting Started
 
 ### Prerequisites
 
--   Python 3.5.3 or higher
+-   Python 3.12 or higher
 -   Discord account and a server to test the bot
 
 ### Installation
@@ -31,15 +38,16 @@ The bot is developed in Python using the `interactions.py` library. A private Gi
     ```bash
     git clone https://github.com/suhaybu/sanitizer-bot.git
     ```
-2. **(Optional Step) Setup virtual Python environment and activate:**
+2. **Setup virtual Python environment:**
     ```bash
     python3 -m venv .venv
     ```
-    To activate on Unix or MacOS
+3. Activate virtual Python environment:
+   on Unix or MacOS
     ```bash
     source .venv/bin/activate
     ```
-    To activate on Windows
+    on Windows
     ```bash
     .venv\Scripts\activate
     ```
@@ -55,15 +63,14 @@ The bot is developed in Python using the `interactions.py` library. A private Gi
 To run the bot, use the following command:
 
 ```bash
-python bot.py
+python main.py
 ```
 
 ## Usage
 
 Once the bot is running and in your server, you can use the following commands:
 
--   `/sync`: To sync your slash commands.
--   `/example`: Example.
+-   `/credits`: To roll the credits
 
 ## Contributing
 
@@ -88,5 +95,5 @@ Project Link: [https://github.com/suhaybu/sanitizer-bot](https://github.com/suha
 ## Acknowledgments
 -   [interactions.py](https://github.com/interactions-py/interactions.py)
 -   **Twitter:** Thanks to FixTweet's awesome [FxTwitter](https://github.com/FixTweet/FxTwitter) project
--   **Instagram:** Thanks to [Embedez](https://embedez.com/) reliable service
+-   **Instagram:** Thanks to [Embedez](https://embedez.com/) reliable service (TODO)
 -   **TikTok:** Thanks to [QuickVids](https://quickvids.win/) super fast API

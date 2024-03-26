@@ -8,11 +8,14 @@ from utils.quickvids_api import create_short_url
 class Tiktok(Extension):
 	@listen(event_name=MessageCreate)
 	async def on_message(self, event: MessageCreate):
-		tiktok_regex = r'https?:\/\/.*tiktok\.com\/.*'
+		tiktok_regex = re.compile(
+			r'https?:\/\/.*tiktok\.com\/.*',
+			re.IGNORECASE | re.MULTILINE,
+		)
 		match = re.search(tiktok_regex, event.message.content)
 
 		if match:
-			api_response = create_short_url(match.group(), detailed=True)
+			api_response = create_short_url(match.group().lower(), detailed=True)
 
 			quickvids_url = api_response['quickvids_url']
 			author_username = api_response['details']['author']['username']

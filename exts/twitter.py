@@ -7,8 +7,14 @@ from interactions.api.events import MessageCreate
 class Twitter(Extension):
 	@listen(event_name=MessageCreate)
 	async def on_message(self, event: MessageCreate):
-		twitter_regex = r'https?:\/\/(?:www\.)?twitter\.com\/(\w+)(\/status\/\S*)'
-		x_regex = r'https?:\/\/(?:www\.)?x\.com\/(\w+)(\/status\/\S*)'
+		twitter_regex = re.compile(
+			r'https?:\/\/(?:www\.)?twitter\.com\/(\w+)(\/status\/\S*)',
+			re.IGNORECASE | re.MULTILINE,
+		)
+		x_regex = re.compile(
+			r'https?:\/\/(?:www\.)?x\.com\/(\w+)(\/status\/\S*)',
+			re.IGNORECASE | re.MULTILINE,
+		)
 
 		match = re.search(twitter_regex, event.message.content)
 		service = 'Twitter'

@@ -1,5 +1,6 @@
 import re
-from interactions import AllowedMentions, Extension, listen, Message
+
+from interactions import AllowedMentions, Extension, Message, listen
 from interactions.api.events import MessageCreate
 
 from utils.quickvids_api import create_short_url
@@ -9,13 +10,13 @@ class Tiktok(Extension):
 	@listen(event_name=MessageCreate)
 	async def on_message(self, event: MessageCreate):
 		tiktok_regex = re.compile(
-			r'https?:\/\/.*tiktok\.com\/.*',
-			re.IGNORECASE | re.MULTILINE,
+			r'https?://(?:\w{1,3}\.)?tiktok\.com/[^\/]+\/?\S*',
+			re.IGNORECASE,
 		)
 		match = re.search(tiktok_regex, event.message.content)
 
 		if match:
-			api_response = create_short_url(match.group().lower(), detailed=True)
+			api_response = create_short_url(match.group(), detailed=True)
 
 			quickvids_url = api_response['quickvids_url']
 			author_username = api_response['details']['author']['username']

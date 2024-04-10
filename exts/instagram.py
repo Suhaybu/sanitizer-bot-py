@@ -5,14 +5,15 @@ from interactions.api.events import MessageCreate
 
 
 class Instagram(Extension):
-	@listen(event_name=MessageCreate)
-	async def on_message(self, event: MessageCreate):
-		instagram_regex = re.compile(
+	def __init__(self, bot) -> None:
+		self.instagram_regex = re.compile(
 			r'https?:\/\/(?:www\.)?instagram\.com/(reel|p)/([^/\s?]+)',
 			re.IGNORECASE | re.MULTILINE,
 		)
 
-		match = re.search(instagram_regex, event.message.content)
+	@listen(event_name=MessageCreate)
+	async def on_message(self, event: MessageCreate):
+		match = re.search(self.instagram_regex, event.message.content)
 
 		if match:
 			type, url_data = match.groups()

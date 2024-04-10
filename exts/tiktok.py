@@ -7,13 +7,15 @@ from utils.quickvids_api import create_short_url
 
 
 class Tiktok(Extension):
-	@listen(event_name=MessageCreate)
-	async def on_message(self, event: MessageCreate):
-		tiktok_regex = re.compile(
+	def __init__(self, bot) -> None:
+		self.tiktok_regex = re.compile(
 			r'https?://(?:\w{1,3}\.)?tiktok\.com/[^\/]+\/?\S*',
 			re.IGNORECASE,
 		)
-		match = re.search(tiktok_regex, event.message.content)
+
+	@listen(event_name=MessageCreate)
+	async def on_message(self, event: MessageCreate):
+		match = re.search(self.tiktok_regex, event.message.content)
 
 		if match:
 			api_response = create_short_url(match.group(), detailed=True)

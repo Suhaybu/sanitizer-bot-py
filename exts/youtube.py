@@ -5,9 +5,8 @@ from interactions.api.events import MessageCreate
 
 
 class Youtube(Extension):
-	@listen(event_name=MessageCreate)
-	async def on_message(self, event: MessageCreate):
-		youtube_regex = re.compile(
+	def __init__(self, bot) -> None:
+		self.youtube_regex = re.compile(
 			r'https?://(?:www\.)?youtu(?:be.com|\.be)/((?:watch\?v=)?(?:[a-zA-Z0-9_-]+))(?:(?:\S+)?\&t=(\d+))?',
 			re.IGNORECASE,
 		)
@@ -15,13 +14,19 @@ class Youtube(Extension):
 			r'https?://music\.youtube\.com/((?:watch\?v=)?(?:[a-zA-Z0-9_-]+))(?:(?:\S+)?\&t=(\d+))?',
 			re.IGNORECASE,
 		)
+		self.youtube_music_regex = re.compile(
+			r'https?://music\.youtube\.com/((?:watch\?v=)?(?:[a-zA-Z0-9_-]+))(?:(?:\S+)?\&t=(\d+))?',
+			re.IGNORECASE,
+		)
 
-		match = re.search(youtube_regex, event.message.content)
+	@listen(event_name=MessageCreate)
+	async def on_message(self, event: MessageCreate):
+		match = re.search(self.youtube_regex, event.message.content)
 
 		if match:
 			service: str = 'Video via YouTube'
 		else:
-			match = re.search(youtube_music_regex, event.message.content)
+			match = re.search(self.youtube_music_regex, event.message.content)
 			if match:
 				service: str = 'Music via YouTube'
 			else:

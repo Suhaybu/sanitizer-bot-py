@@ -19,11 +19,11 @@ class Youtube(Extension):
 		match = re.search(youtube_regex, event.message.content)
 
 		if match:
-			service: str = 'YouTube'
+			service: str = 'Video via YouTube'
 		else:
 			match = re.search(youtube_music_regex, event.message.content)
 			if match:
-				service: str = 'YouTube Music'
+				service: str = 'Music via YouTube'
 			else:
 				return  # End the program, no match
 		link_data = match.group(1)

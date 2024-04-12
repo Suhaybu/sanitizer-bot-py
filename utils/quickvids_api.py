@@ -8,5 +8,4 @@ def create_short_url(input_text, detailed=False):
 	response = requests.post(url, json=data, headers=headers)
 	if response.status_code == 200:
 		return response.json()  # Includes quickvids_url and possibly details
-	else:
-		return response.json()  # Error handling
+	return response.json()  # Error handling

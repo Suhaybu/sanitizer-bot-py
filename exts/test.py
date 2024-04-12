@@ -1,4 +1,3 @@
-import pprint
 
 from interactions import Extension, SlashContext, slash_command
 

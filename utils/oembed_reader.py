@@ -62,9 +62,7 @@ class OembedReader:
 		return str(response)
 
 	@staticmethod
-	def get_oembed_metadata(
-		metaCdnUrl, format='jsonp', maxwidth=None, maxheight=None
-	):
+	def get_oembed_metadata(metaCdnUrl, format='jsonp', maxwidth=None, maxheight=None):
 		url = 'http://www.metacdn.com/api/oembed'
 		params = {
 			'url': metaCdnUrl,

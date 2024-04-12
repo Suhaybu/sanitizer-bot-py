@@ -28,8 +28,8 @@ class OembedReader:
 			data = response.json()
 			pprint.pprint(data)
 			return str(data)
-		else:
-			print(f'Failed to fetch oEmbed data. Status code: {response.status_code}')
+
+		print(f'Failed to fetch oEmbed data. Status code: {response.status_code}')
 
 	@staticmethod
 	def get_embed_response() -> Union[str, None]:

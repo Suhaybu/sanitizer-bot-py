@@ -1,6 +1,6 @@
 import re
 
-from interactions import AllowedMentions, Extension, Message, listen
+from interactions import AllowedMentions, Extension, listen
 from interactions.api.events import MessageCreate
 
 

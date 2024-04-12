@@ -20,7 +20,8 @@ class OembedReader:
 	def get_module_name(self) -> str:
 		return str(self.module_name)
 
-	def get_embed_data(self, url: str) -> str:
+	@staticmethod
+	def get_embed_data(url: str) -> str:
 		endpoint = f'https://api.embed.rocks/api/oembed?url={url}'
 		response = requests.get(endpoint)
 		if response.status_code == 200:
@@ -30,7 +31,8 @@ class OembedReader:
 		else:
 			print(f'Failed to fetch oEmbed data. Status code: {response.status_code}')
 
-	def get_embed_response(self) -> Union[str, None]:
+	@staticmethod
+	def get_embed_response() -> Union[str, None]:
 		headers = {
 			'accept': '*/*',
 			'accept-language': 'en-US,en;q=0.9',
@@ -59,8 +61,9 @@ class OembedReader:
 		print(response.text)
 		return str(response)
 
+	@staticmethod
 	def get_oembed_metadata(
-		self, metaCdnUrl, format='jsonp', maxwidth=None, maxheight=None
+		metaCdnUrl, format='jsonp', maxwidth=None, maxheight=None
 	):
 		url = 'http://www.metacdn.com/api/oembed'
 		params = {

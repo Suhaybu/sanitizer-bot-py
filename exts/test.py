@@ -15,7 +15,6 @@ class Test(Extension):
 
 		bot_response: str = 'module name: '
 		bot_response += '\nOembed data for url:\n'
-		# bot_response += str(self.o_embed.get_embed_response())
 		bot_response += str(self.o_embed.get_oembed_metadata(metaCdnUrl=url))
 
 		await ctx.respond(bot_response, ephemeral=True)

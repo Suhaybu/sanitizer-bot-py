@@ -1,0 +1,19 @@
+curl 'https://discord.com/api/v9/unfurler/unfurl' \
+  -H 'accept: */*' \
+  -H 'accept-language: en-US,en;q=0.9' \
+  -H 'authorization: NTkyMjU3MjcxNjIzNTgxNzI1.G3LG4k.7eGrm24VfwcnFuB-qYU_WtOIdrT4G8VXLTlmRc' \
+  -H 'content-type: application/json' \
+  -H 'cookie: __Secure-recent_mfa=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MTI2Nzk2ODksIm5iZiI6MTcxMjY3OTY4OSwiZXhwIjoxNzEyNjc5OTg5LCJpc3MiOiJ1cm46ZGlzY29yZC1hcGkiLCJhdWQiOiJ1cm46ZGlzY29yZC1tZmEtcmVwcm9tcHQiLCJ1c2VyIjo1OTIyNTcyNzE2MjM1ODE3MjV9.036lgw4bQLboUBSr3VvkOxUvnQN_5o3bJ1s67FM3tyTOvOW3bpfSE_FmvS_sl4UZwNNueyzjZtzhb036nSsfJw; __dcfduid=e3d34dc0cfcf11eeaca5913583765d19; __sdcfduid=e3d34dc1cfcf11eeaca5913583765d19349ddc586680b11449218565ac9f700ff1d1c140dbd224451dca0cd04939c250; locale=en-US; __cfruid=fe069ce7fa3605a31ed9859c30d32d17e2e6ca75-1712854799; _cfuvid=Vz.AR2AndHp5Um7aaEwjitjAr3TAsgViXzh0E5Gxz9c-1712854799277-0.0.1.1-604800000; cf_clearance=kYh5ZEpOi3ZO9IaezDOGe_ya2P8ktF0eiXj4FsTlyNs-1712854800-1.0.1.1-2RWeDxsLcviipzFXIP0yuKmEZy7FT.kw_Tz4_NmGmlws9jAWTKwuUJMESsJ4.0BojrhEs2Nr9uRfRfQhqAjqPA; OptanonConsent=isIABGlobal=false&datestamp=Thu+Apr+11+2024+22%3A44%3A00+GMT%2B0300+(Arabian+Standard+Time)&version=6.33.0&hosts=&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1&AwaitingReconsent=false' \
+  -H 'dnt: 1' \
+  -H 'origin: https://discord.com' \
+  -H 'referer: https://discord.com/developers/embeds?url=https%253A%252F%252Ffixupx.com%252Fstatus%252F1776651619083370731%253Fs%253D46' \
+  -H 'sec-ch-ua: "Chromium";v="123", "Not:A-Brand";v="8"' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'sec-ch-ua-platform: "macOS"' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-site: same-origin' \
+  -H 'sec-gpc: 1' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36' \
+  -H 'x-track: eyJvcyI6Ik1hYyBPUyBYIiwiYnJvd3NlciI6IkNocm9tZSIsImRldmljZSI6IiIsInN5c3RlbV9sb2NhbGUiOiJlbi1VUyIsImJyb3dzZXJfdXNlcl9hZ2VudCI6Ik1vemlsbGEvNS4wIChNYWNpbnRvc2g7IEludGVsIE1hYyBPUyBYIDEwXzE1XzcpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xMjMuMC4wLjAgU2FmYXJpLzUzNy4zNiIsImJyb3dzZXJfdmVyc2lvbiI6IjEyMy4wLjAuMCIsIm9zX3ZlcnNpb24iOiIxMC4xNS43IiwicmVmZXJyZXIiOiJodHRwczovL3d3dy5nb29nbGUuY29tLyIsInJlZmVycmluZ19kb21haW4iOiJ3d3cuZ29vZ2xlLmNvbSIsInNlYXJjaF9lbmdpbmUiOiJnb29nbGUiLCJyZWZlcnJlcl9jdXJyZW50IjoiIiwicmVmZXJyaW5nX2RvbWFpbl9jdXJyZW50IjoiIiwicmVsZWFzZV9jaGFubmVsIjoic3RhYmxlIiwiY2xpZW50X2J1aWxkX251bWJlciI6Mzg2OTQsImNsaWVudF9ldmVudF9zb3VyY2UiOm51bGx9' \
+  --data-raw '{"url":"https://fixupx.com/status/1776651619083370731?s=46"}'

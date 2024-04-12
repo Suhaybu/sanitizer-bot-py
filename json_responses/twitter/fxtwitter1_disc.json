@@ -1,0 +1,35 @@
+{
+	"embeds": [
+		{
+			"type": "video",
+			"url": "https://fixupx.com/status/1776651619083370731",
+			"title": "Mario Nawfal (@MarioNawfal)",
+			"description": "🚨AMAZON'S AI CHECKOUT ISN’T THAT SMART- 1,000 INDIANS ARE WATCHING\n\nAmazon's \"Just Walk Out\" technology, enabling customers to shop without traditional checkout, reportedly involves significant human input alongside AI. \n\nDespite employing sensors and deep learning for seamless shopping experiences, over 1,000 workers in India reportedly play a ...",
+			"color": 43260,
+			"author": {
+				"name": "🚨AMAZON'S AI CHECKOUT ISN’T THAT SMART- 1,000 INDIANS ARE WATCHING\n\nAmazon's \"Just Walk Out\" technology, enabling customers to shop without traditional checkout, reportedly involves significant human input alongside AI. \n\nDespite employing sensors and de…",
+				"url": "https://twitter.com/MarioNawfal/status/1776651619083370731"
+			},
+			"provider": {
+				"name": "💬 61   🔁 48   ❤️ 316   👁️ 162.8K",
+				"url": "https://twitter.com/MarioNawfal/status/1776651619083370731"
+			},
+			"thumbnail": {
+				"url": "https://pbs.twimg.com/ext_tw_video_thumb/1776651560065355777/pu/img/hOun2AsWoqIkwdml.jpg",
+				"proxy_url": "https://images-ext-1.discordapp.net/external/IuS9qf5q-ZCxBxakK-b6X5q5r_tY9b3pGIZ0k4kHFcg/https/pbs.twimg.com/ext_tw_video_thumb/1776651560065355777/pu/img/hOun2AsWoqIkwdml.jpg",
+				"width": 1200,
+				"height": 675,
+				"placeholder": "XAgKFIJEdoePeIeFh4SqYOgf4Q==",
+				"placeholder_version": 1
+			},
+			"video": {
+				"url": "https://video.twimg.com/ext_tw_video/1776651560065355777/pu/vid/avc1/1280x720/ghrsp6Ck5kWm3uBO.mp4?tag=12",
+				"width": 1280,
+				"height": 720,
+				"proxy_url": "https://images-ext-1.discordapp.net/external/lUX3dwh7kqWGVEdd4aY0xC4zMM_VRZR8cegmhmiEvBE/%3Ftag%3D12/https/video.twimg.com/ext_tw_video/1776651560065355777/pu/vid/avc1/1280x720/ghrsp6Ck5kWm3uBO.mp4",
+				"placeholder": "XAgKDIJEdoePeIeFh4SZYOcv4Q==",
+				"placeholder_version": 1
+			}
+		}
+	]
+}

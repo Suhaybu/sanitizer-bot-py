@@ -1,0 +1,50 @@
+{
+"id": "MQX7Zv0",
+"url": "https://youtu.be/W-D22nGcF9I",
+"type": "rich",
+"version": "1.0",
+"title": "POV Starting a new Skyrim Playthrough",
+"author": "POV Starting a new Skyrim Playthrough",
+"author_url": "https://youtu.be/W-D22nGcF9I",
+"provider_name": "YouTube / 13373333.one",
+"description": "Noobnut125 (@Noobnut125)",
+"thumbnail_url": "https://i.ytimg.com/vi/W-D22nGcF9I/maxresdefault.jpg",
+"thumbnail_width": 1280,
+"thumbnail_height": 720,
+"html": "<div><div style=\"left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%; padding-top: 120px;\"><iframe src=\"//if-cdn.com/MQX7Zv0?app=1\" style=\"top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;\" allowfullscreen allow=\"accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;\"></iframe></div></div><script async src=\"//if-cdn.com/embed.js\" charset=\"utf-8\"></script>",
+"cache_age": 86400,
+"options": {
+"_start": {
+"label": "Start from",
+"value": "",
+"placeholder": "ex.: 11, 1m10s"
+},
+"_end": {
+"label": "End on",
+"value": "",
+"placeholder": "ex.: 11, 1m10s"
+},
+"_cc_load_policy": {
+"label": "Closed captions",
+"value": false
+},
+"click_to_play": {
+"label": "Hold load & play until clicked",
+"value": false
+},
+"media": {
+"value": "",
+"values": {
+"0": "Don't include attached player",
+"1": "Attached player only, no card",
+"": "Keep using full media card"
+}
+},
+"card": {
+"value": "",
+"values": {
+"small": "Make it a small card"
+}
+}
+}
+}

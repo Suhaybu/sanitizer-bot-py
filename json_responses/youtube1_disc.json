@@ -1,0 +1,33 @@
+{
+	"embeds": [
+		{
+			"type": "video",
+			"url": "https://yt.cdn.13373333.one/watch?v=W-D22nGcF9I",
+			"title": "Noobnut125 (@Noobnut125)",
+			"description": "POV Starting a new Skyrim Playthrough",
+			"color": 16711680,
+			"author": {
+				"name": "POV Starting a new Skyrim Playthrough",
+				"url": "https://youtu.be/W-D22nGcF9I"
+			},
+			"provider": {
+				"name": "YouTube / 13373333.one",
+				"url": "https://github.com/ray-1337/youtube-discord-embed"
+			},
+			"thumbnail": {
+				"url": "https://i.ytimg.com/vi_webp/W-D22nGcF9I/maxresdefault.webp",
+				"proxy_url": "https://images-ext-1.discordapp.net/external/iHLKfKk98hlJkap2wcOAh2Mrt_OdR9_ocTBbUU5aGeM/https/i.ytimg.com/vi_webp/W-D22nGcF9I/maxresdefault.webp",
+				"width": 1280,
+				"height": 720,
+				"placeholder": "5MYJNIY5h3dveYeBiHqIgGcHaA==",
+				"placeholder_version": 1
+			},
+			"video": {
+				"url": "https://rr3---sn-p5qddn7d.googlevideo.com/videoplayback?expire=1712897933&ei=LWsYZtTrDMeHkucP87SAWA&ip=3.238.74.40&id=o-AJ1sHIKbcRw_WFi38wVwue40ozpm_QUi85nev27YD9H8&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=6V&mm=31%2C26&mn=sn-p5qddn7d%2Csn-vgqsknzz&ms=au%2Conr&mv=u&mvi=3&pl=21&bui=AaUN6a3-mut65LZk55dntB--JE96phsyrL_Oq5YjdTAaDDqEps6_xnWfmO2w_Fx_k-xZ9Gk03DNMip1p&spc=UWF9f4ZkW4yE4sIOPWfu9lStLx-scRg0LLII__nfm_54jgZlPLrwIvLu-dbl&vprv=1&svpuc=1&mime=video%2Fmp4&ns=Wt2wmeq5strumkcD_lxpUOcQ&cnr=14&ratebypass=yes&dur=76.974&lmt=1711433442929678&mt=1712875898&fvip=3&c=WEB&sefc=1&txp=6308224&n=hGWCiNOTuXLUIg&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRAIgHGMzZGBDbFPK8scNunZDTWboJVD5Pg0Z8XwiXDkcg10CIGnqze3RqpBJa2-S4y_nDyaKy4CGST7hu9YCMqGl3jQq&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl&lsig=ALClDIEwRgIhAMzFpqyBXwKh4AnKSGLXElBZSX_HQxZr0zicZM41f8SNAiEAjn5eqsu2lVvzbvgN5kmnpvZ3Za6sZiJN_V6YRSlJS9w%3D",
+				"width": 1280,
+				"height": 720,
+				"proxy_url": "https://images-ext-1.discordapp.net/external/PA__CySxkoNnHCohDKHWL4Q0TPhnO7eL5yilKrIXUSk/%3Fexpire%3D1712897933%26ei%3DLWsYZtTrDMeHkucP87SAWA%26ip%3D3.238.74.40%26id%3Do-AJ1sHIKbcRw_WFi38wVwue40ozpm_QUi85nev27YD9H8%26itag%3D22%26source%3Dyoutube%26requiressl%3Dyes%26xpc%3DEgVo2aDSNQ%253D%253D%26mh%3D6V%26mm%3D31%252C26%26mn%3Dsn-p5qddn7d%252Csn-vgqsknzz%26ms%3Dau%252Conr%26mv%3Du%26mvi%3D3%26pl%3D21%26bui%3DAaUN6a3-mut65LZk55dntB--JE96phsyrL_Oq5YjdTAaDDqEps6_xnWfmO2w_Fx_k-xZ9Gk03DNMip1p%26spc%3DUWF9f4ZkW4yE4sIOPWfu9lStLx-scRg0LLII__nfm_54jgZlPLrwIvLu-dbl%26vprv%3D1%26svpuc%3D1%26mime%3Dvideo%252Fmp4%26ns%3DWt2wmeq5strumkcD_lxpUOcQ%26cnr%3D14%26ratebypass%3Dyes%26dur%3D76.974%26lmt%3D1711433442929678%26mt%3D1712875898%26fvip%3D3%26c%3DWEB%26sefc%3D1%26txp%3D6308224%26n%3DhGWCiNOTuXLUIg%26sparams%3Dexpire%252Cei%252Cip%252Cid%252Citag%252Csource%252Crequiressl%252Cxpc%252Cbui%252Cspc%252Cvprv%252Csvpuc%252Cmime%252Cns%252Ccnr%252Cratebypass%252Cdur%252Clmt%26sig%3DAJfQdSswRAIgHGMzZGBDbFPK8scNunZDTWboJVD5Pg0Z8XwiXDkcg10CIGnqze3RqpBJa2-S4y_nDyaKy4CGST7hu9YCMqGl3jQq%26lsparams%3Dmh%252Cmm%252Cmn%252Cms%252Cmv%252Cmvi%252Cpl%26lsig%3DALClDIEwRgIhAMzFpqyBXwKh4AnKSGLXElBZSX_HQxZr0zicZM41f8SNAiEAjn5eqsu2lVvzbvgN5kmnpvZ3Za6sZiJN_V6YRSlJS9w%253D/https/rr3---sn-p5qddn7d.googlevideo.com/videoplayback"
+			}
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"embeds": [
+		{
+			"type": "video",
+			"url": "https://ddinstagram.com/reel/C5C2K_CtO9D/?igsh=MmMyb3M1aXlzbjNq",
+			"title": "@mordeninsagbullugu",
+			"description": "Tr 1 pyke gameplay",
+			"color": 13500529,
+			"author": {
+				"name": "Tr 1 pyke gameplay",
+				"url": "https://instagram.com/reel/C5C2K_CtO9D/"
+			},
+			"provider": {
+				"name": "InstaFix",
+				"url": "https://github.com/Wikidepia/InstaFix"
+			},
+			"video": {
+				"url": "https://ddinstagram.com/videos/C5C2K_CtO9D/1",
+				"width": 720,
+				"height": 1280,
+				"proxy_url": "https://images-ext-1.discordapp.net/external/h5PQNSQVc58E0R0uN3X90mAJDVULQd051ahFsjtG6Eg/https/ddinstagram.com/videos/C5C2K_CtO9D/1",
+				"placeholder": "zscFDARWiESYsooPmoWveQnLxQ==",
+				"placeholder_version": 1
+			}
+		}
+	]
+}

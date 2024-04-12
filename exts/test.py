@@ -1,4 +1,3 @@
-
 from interactions import Extension, SlashContext, slash_command
 
 from utils.oembed_reader import OembedReader

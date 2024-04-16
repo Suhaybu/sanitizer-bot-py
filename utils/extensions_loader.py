@@ -12,10 +12,12 @@ def extensions_loader(extensions_names, bot):
 
 	if not failed_extensions:
 		print('All extensions are loaded!')
+
 	print(
-		f'{len(loaded_extensions)}/{total} Successfully loaded: {', '.join(loaded_extensions)}'
+		f'{len(loaded_extensions)}/{total} Successfully loaded: {", ".join(loaded_extensions)}'
 	)
+
 	if failed_extensions:
 		print(
-			f'{len(failed_extensions)}/{total} Failed to load: {', '.join(loaded_extensions)}'
+			f'{len(failed_extensions)}/{total} Failed to load: {", ".join(failed_extensions)}'
 		)

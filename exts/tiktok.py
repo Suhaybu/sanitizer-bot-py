@@ -1,8 +1,7 @@
 import re
 
 import requests
-from interactions import (AllowedMentions, Extension, Member, SlashContext,
-                          listen)
+from interactions import AllowedMentions, Extension, Member, SlashContext, listen
 from interactions.api.events import MessageCreate
 
 

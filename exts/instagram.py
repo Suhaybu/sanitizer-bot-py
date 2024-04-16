@@ -1,6 +1,6 @@
 import re
 
-from interactions import AllowedMentions, Extension, listen
+from interactions import AllowedMentions, Extension, Member, listen
 from interactions.api.events import MessageCreate
 
 
@@ -27,4 +27,5 @@ class Instagram(Extension):
 			await event.message.reply(
 				bot_response, allowed_mentions=AllowedMentions.none()
 			)
-			await event.message.suppress_embeds()
+			if isinstance(event.message.author, Member):
+				await event.message.suppress_embeds()

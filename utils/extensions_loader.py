@@ -1,7 +1,10 @@
-def extensions_loader(extensions_names, bot):
+from interactions import Client
+
+
+def extensions_loader(extensions_names: list[str], bot: Client):
 	total = len(extensions_names)
-	loaded_extensions = []
-	failed_extensions = []
+	loaded_extensions: list[str] = []
+	failed_extensions: list[str] = []
 
 	for extension in extensions_names:
 		try:

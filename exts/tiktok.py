@@ -50,7 +50,11 @@ class Tiktok(Extension):
 
 	@listen(event_name=MessageCreate)
 	async def on_message(self, event: MessageCreate):
-		bot_response = self.get_tiktok_response(event.message.content)
+		try:
+			bot_response = self.get_tiktok_response(event.message.content)
+		except Exception:
+			return
+
 		if not bot_response:
 			return
 

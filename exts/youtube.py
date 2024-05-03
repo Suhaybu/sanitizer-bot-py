@@ -51,9 +51,14 @@ class Youtube(Extension):
 
 	@listen(event_name=MessageCreate)
 	async def on_message(self, event: MessageCreate):
-		response = self.get_youtube_response(event.message.content)
+		try:
+			response = self.get_youtube_response(event.message.content)
+		except Exception:
+			return
+
 		if not response:
 			return
+
 		bot_response, has_time_stamp = response
 
 		await event.message.add_reaction('<:Sanitized:1206376642042138724>')

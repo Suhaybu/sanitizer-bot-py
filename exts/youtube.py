@@ -53,15 +53,18 @@ class Youtube(Extension):
 	async def on_message(self, event: MessageCreate):
 		try:
 			response = self.get_youtube_response(event.message.content)
+
+			if not response:
+				return
+
+			bot_response, has_time_stamp = response
+
+			await event.message.add_reaction('<:Sanitized:1206376642042138724>')
+			await event.message.reply(
+				bot_response, allowed_mentions=AllowedMentions.none()
+			)
+			if not has_time_stamp and isinstance(event.message.author, Member):
+				await event.message.suppress_embeds()
+
 		except Exception:
 			return
-
-		if not response:
-			return
-
-		bot_response, has_time_stamp = response
-
-		await event.message.add_reaction('<:Sanitized:1206376642042138724>')
-		await event.message.reply(bot_response, allowed_mentions=AllowedMentions.none())
-		if not has_time_stamp and isinstance(event.message.author, Member):
-			await event.message.suppress_embeds()

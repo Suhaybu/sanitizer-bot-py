@@ -11,10 +11,6 @@ class Youtube(Extension):
 			r'https?://(?:www\.)?youtu(?:be.com|\.be)/((?:watch\?v=)?(?:[a-zA-Z0-9_-]+))(?:(?:\S+)?\&t=(\d+))?',
 			re.IGNORECASE,
 		)
-		youtube_music_regex = re.compile(
-			r'https?://music\.youtube\.com/((?:watch\?v=)?(?:[a-zA-Z0-9_-]+))(?:(?:\S+)?\&t=(\d+))?',
-			re.IGNORECASE,
-		)
 		self.youtube_music_regex = re.compile(
 			r'https?://music\.youtube\.com/((?:watch\?v=)?(?:[a-zA-Z0-9_-]+))(?:(?:\S+)?\&t=(\d+))?',
 			re.IGNORECASE,
@@ -63,8 +59,8 @@ class Youtube(Extension):
 			await event.message.reply(
 				bot_response, allowed_mentions=AllowedMentions.none()
 			)
-			if not has_time_stamp and isinstance(event.message.author, Member):
-				await event.message.suppress_embeds()
+			# if not has_time_stamp and isinstance(event.message.author, Member):
+			# 	await event.message.suppress_embeds()
 
 		except Exception:
 			return

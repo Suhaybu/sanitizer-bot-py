@@ -15,7 +15,7 @@ class Tiktok(Extension):
 
 	@staticmethod
 	def create_short_url(input_text: str, detailed: bool = False):
-		url = 'https://api.quickvids.win/v2/quickvids/shorturl'
+		url = 'https://api.quickvids.app/v2/quickvids/shorturl'
 		headers = {
 			'Content-Type': 'application/json',
 			'Authorization': 'Bearer NTkyMjU3MjcxNjIzNTgxNzI1.ZFkvmjd2nTqBB2xjkvT6EnIKlHKGNAh7Q6DIJFhu',

@@ -12,9 +12,9 @@ load_dotenv()
 
 
 bot = Client(
-	token=os.getenv('BOT_TOKEN'),
+	token=os.getenv("BOT_TOKEN"),
 	status=interactions.Status.ONLINE,
-	activity=interactions.Activity(name='with embeds', type=ActivityType.PLAYING),
+	activity=interactions.Activity(name="with embeds", type=ActivityType.PLAYING),
 	sync_interactions=True,
 	intents=Intents.DEFAULT | Intents.MESSAGE_CONTENT,
 )
@@ -22,18 +22,18 @@ bot = Client(
 
 @listen(Startup)
 async def on_ready():
-	print('Sanitizer Bot is Online!')
+	print("Sanitizer Bot is Online!")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 	try:
-		print('Starting bot and loading exts..')
+		print("Starting bot and loading exts..")
 		extensions_names = [
-			m.name for m in pkgutil.iter_modules(['exts'], prefix='exts.')
+			m.name for m in pkgutil.iter_modules(["exts"], prefix="exts.")
 		]
 		extensions_loader(extensions_names, bot)
 		bot.start()
 	except Exception as e:
-		print(f'Sanitizer bot could not start.\nError: {e}')
+		print(f"Sanitizer bot could not start.\nError: {e}")
 	finally:
-		print('\nSanitizer Bot is Offline')
+		print("\nSanitizer Bot is Offline")

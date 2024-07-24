@@ -2,6 +2,7 @@ import asyncio
 
 from interactions import (
 	AllowedMentions,
+	Embed,
 	Extension,
 	Member,
 	OptionType,
@@ -61,6 +62,16 @@ class Sanitize(Extension):
 			bot_response = await self.sanitize(user_input=link)
 
 			if not bot_response:
+				bot_response = (
+					"I couldn't find a supported URL in the message you asked me to sanitize.\n"
+					"To learn more about me and what I can do, try `/credits`! "
+				)
+				await ctx.send(
+					embed=Embed(
+						title="Sorry :c", description=bot_response, color="#d1001f"
+					),
+					ephemeral=True,
+				)
 				return
 
 			await ctx.send(bot_response, allowed_mentions=AllowedMentions.none())

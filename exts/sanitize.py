@@ -7,7 +7,7 @@ from interactions import (
 	Member,
 	OptionType,
 	SlashContext,
-	contexts,
+	integration_types,
 	listen,
 	slash_command,
 	slash_option,
@@ -58,7 +58,7 @@ class Sanitize(Extension):
 		opt_type=OptionType.STRING,
 		required=True,
 	)
-	@contexts(guild=True, bot_dm=True, private_channel=True)
+	@integration_types(guild=True, user=True)
 	async def slashSanitize(self, ctx: SlashContext, link: str):
 		try:
 			bot_response = await self.sanitize(user_input=link)

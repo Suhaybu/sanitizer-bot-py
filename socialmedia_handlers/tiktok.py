@@ -1,8 +1,6 @@
-import os
 import re
 
 import aiohttp
-import requests
 
 from main import get_quick_vids_token
 

@@ -1,9 +1,12 @@
 import re
+import os
 from typing import Optional
 
 import requests
 from interactions import AllowedMentions, Extension, Member, listen
 from interactions.api.events import MessageCreate
+
+from main import get_quick_vids_token
 
 
 class Tiktok(Extension):
@@ -12,13 +15,13 @@ class Tiktok(Extension):
 			r"https?://(?:\w{1,3}\.)?tiktok\.com/[^\/]+\/?\S*",
 			re.IGNORECASE,
 		)
+		self.token = get_quick_vids_token()
 
-	@staticmethod
-	def create_short_url(input_text: str, detailed: bool = False):
+	def create_short_url(self, input_text: str, detailed: bool = False):
 		url = "https://api.quickvids.app/v2/quickvids/shorturl"
 		headers = {
 			"Content-Type": "application/json",
-			"Authorization": "Bearer NTkyMjU3MjcxNjIzNTgxNzI1.ZFkvmjd2nTqBB2xjkvT6EnIKlHKGNAh7Q6DIJFhu",
+			"Authorization": f"Bearer {self.token}",
 		}
 		data = {"input_text": input_text, "detailed": detailed}
 		response = requests.post(url, json=data, headers=headers)

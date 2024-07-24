@@ -38,5 +38,6 @@ if __name__ == "__main__":
 	finally:
 		print("\nSanitizer Bot is Offline")
 
-def get_quick_vids_token() -> str|None:
+
+def get_quick_vids_token() -> str | None:
 	return os.getenv("QUICKVIDS_TOKEN")

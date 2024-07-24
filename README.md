@@ -15,22 +15,24 @@ The bot is developed in Python using the `interactions.py` library. Click [here]
 ## TODO
 
 -   Add Reddit Support
--   Add User Installable commandds
+-		Add a config panel
 
 ## Features
 
 -   **Supports Multiple platforms:** Currently works with Twitter, TikTok, Instagram. More to come!
--   **Automatic conversion:** Automatically fixes links from any of the supported platforms.
--   **Deleted original embed:** After successfully replying to the original message with fixed embed, automatically deletes original broken embed.
--   **Implemented QuickTock API:** Implemented QuickTock API to convert TikTok links into embeddable content in discord.
--   **Handels DMs:** You can DM Sanitizer with the link you want for it to convert.
+-   **Automatic conversion:** Automatically fixes any supported links posted.
+-   **User Installable App:** The `/sanitize` app command can be used anywhere.
+-   **Handles Direct Messages:** Will attempt to fix links sent in private.
+-   **Implemented QuickVids API:** Implemented QuickVids API to convert TikTok links into embeddable content in discord.
 
 ## Getting Started
+
+If you wish to host your own instance of the Sanitizer bot, follow along.
 
 ### Prerequisites
 
 -   Python 3.12 or higher
--   Discord account and a server to test the bot
+-   A Discord account
 
 ### Installation
 
@@ -43,7 +45,7 @@ The bot is developed in Python using the `interactions.py` library. Click [here]
     python3 -m venv .venv
     ```
 3. Activate virtual Python environment:
-   on Unix or MacOS
+   on Linux or MacOS
     ```bash
     source .venv/bin/activate
     ```
@@ -58,23 +60,28 @@ The bot is developed in Python using the `interactions.py` library. Click [here]
 4. **Set up your Bot Token:**
    Add your Discord bot token to the `.env` file present in the root directory.
 
+5. **Set up your QuickVids Token (for TikTok):**
+	Get your QuickVids api token from [here](https://quickvids.win/dashboard/me).
+
 ### Running the Bot
 
 To run the bot, use the following command:
 
 ```bash
-python main.py
+python3 main.py
 ```
 
 ## Usage
 
-Once the bot is running and in your server, you can use the following commands:
+Once the bot is running, you can use the following commands:
 
 -   `/credits`: To roll the credits
+-		`/sanitize`: To fix the embed of your link
+
 
 ## Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -84,7 +91,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the CCO License. See `LICENSE` for more information.
 
 ## Contact
 
@@ -95,5 +102,5 @@ Project Link: [https://github.com/suhaybu/sanitizer-bot](https://github.com/suha
 ## Acknowledgments
 -   [interactions.py](https://github.com/interactions-py/interactions.py)
 -   **Twitter:** Thanks to FixTweet's awesome [FxTwitter](https://github.com/FixTweet/FxTwitter) project
--   **Instagram:** Thanks to [Embedez](https://embedez.com/) reliable service (TODO)
--   **TikTok:** Thanks to [QuickVids](https://quickvids.win/) super fast API
+-   **TikTok:** Thanks to [QuickVids](https://quickvids.app/) super fast API
+-   **Instagram:** Thanks to [InstaFix](https://github.com/Wikidepia/InstaFix)'s reliable service

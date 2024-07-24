@@ -2,7 +2,7 @@ import re
 from typing import Optional
 
 import requests
-from interactions import AllowedMentions, Extension, Member, SlashContext, listen
+from interactions import AllowedMentions, Extension, Member, listen
 from interactions.api.events import MessageCreate
 
 

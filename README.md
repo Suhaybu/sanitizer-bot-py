@@ -19,6 +19,7 @@ The bot is developed in Python using the `interactions.py` library. Click [here]
 
 ## Features
 
+-   **User Privacy first:** No logs are made on any messages users send.
 -   **Supports Multiple platforms:** Currently works with Twitter, TikTok, Instagram. More to come!
 -   **Automatic conversion:** Automatically fixes any supported links posted.
 -   **User Installable App:** The `/sanitize` app command can be used anywhere.

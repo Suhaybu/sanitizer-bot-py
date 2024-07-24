@@ -15,7 +15,7 @@ The bot is developed in Python using the `interactions.py` library. Click [here]
 ## TODO
 
 -   Add Reddit Support
--		Add a config panel
+-   Add a config panel
 
 ## Features
 

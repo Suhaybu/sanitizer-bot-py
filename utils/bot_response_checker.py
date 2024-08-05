@@ -7,7 +7,7 @@ from models.enums.service import Service
 
 class BotResponseChecker:
 	@staticmethod
-	def is_response_valid(message_embed: List[Embed] | None, service: Service) -> bool:
+	def check_response(message_embed: List[Embed] | None, service: Service) -> bool:
 		if service == Service.TWITTER:
 			if not message_embed:
 				return False

@@ -1,17 +1,9 @@
 import asyncio
 
-from interactions import (
-	AllowedMentions,
-	Embed,
-	Extension,
-	Member,
-	OptionType,
-	SlashContext,
-	integration_types,
-	listen,
-	slash_command,
-	slash_option,
-)
+from interactions import (AllowedMentions, ContextMenuContext, Embed,
+                          Extension, Member, Message, OptionType, SlashContext,
+                          integration_types, listen, message_context_menu,
+                          slash_command, slash_option)
 from interactions.api.events import MessageCreate
 
 from socialmedia_handlers.instagram import Instagram
@@ -35,6 +27,7 @@ class Sanitize(Extension):
 		)
 		return instagram_result or tiktok_result or twitter_result
 
+	# Listener for automatically responding to valid messages
 	@listen(event_name=MessageCreate)
 	async def on_message(self, event: MessageCreate):
 		try:
@@ -51,6 +44,7 @@ class Sanitize(Extension):
 		except Exception:
 			return
 
+	# Slash command
 	@slash_command(name="sanitize", description="Fix the embed of your link! 🫧")
 	@slash_option(
 		name="link",
@@ -62,6 +56,31 @@ class Sanitize(Extension):
 	async def slashSanitize(self, ctx: SlashContext, link: str):
 		try:
 			bot_response = await self.sanitize(user_input=link)
+
+			if not bot_response:
+				bot_response = (
+					"I couldn't find a supported URL in the message you asked me to sanitize.\n"
+					"To learn more about me and what I can do, try `/credits`! "
+				)
+				await ctx.send(
+					embed=Embed(
+						title="Sorry :c", description=bot_response, color="#d1001f"
+					),
+					ephemeral=True,
+				)
+				return
+
+			await ctx.send(bot_response, allowed_mentions=AllowedMentions.none())
+
+		except Exception:
+			return
+
+	# Context Menu command
+	@message_context_menu(name="Sanitize")
+	async def context_sanitize(self, ctx: ContextMenuContext):
+		message: Message = ctx.target
+		try:
+			bot_response = await self.sanitize(user_input=message.content)
 
 			if not bot_response:
 				bot_response = (

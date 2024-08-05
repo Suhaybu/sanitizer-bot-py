@@ -53,7 +53,7 @@ class Sanitize(Extension):
 		required=True,
 	)
 	@integration_types(guild=True, user=True)
-	async def slashSanitize(self, ctx: SlashContext, link: str):
+	async def slash_sanitize(self, ctx: SlashContext, link: str):
 		try:
 			bot_response = await self.sanitize(user_input=link)
 

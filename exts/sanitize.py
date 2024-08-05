@@ -77,6 +77,7 @@ class Sanitize(Extension):
 
 	# Context Menu command
 	@message_context_menu(name="Sanitize")
+	@integration_types(guild=True, user=True)
 	async def context_sanitize(self, ctx: ContextMenuContext):
 		message: Message = ctx.target
 		try:

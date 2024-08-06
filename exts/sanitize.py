@@ -1,7 +1,7 @@
 import asyncio
 
 from interactions import (AllowedMentions, ContextMenuContext, Embed,
-                          Extension, Member, Message, OptionType, SlashContext,
+                          Extension, Message, OptionType, SlashContext,
                           integration_types, listen, message_context_menu,
                           slash_command, slash_option)
 from interactions.api.events import MessageCreate
@@ -18,6 +18,7 @@ class Sanitize(Extension):
 		self.instagram = Instagram()
 		self.tiktok = Tiktok()
 		self.twitter = Twitter()
+		self.response_checker = BotResponseChecker()
 
 	async def sanitize(self, user_input: str) -> ServiceResponse | None:
 		instagram_response = self.instagram.get_response(user_input)
@@ -51,34 +52,9 @@ class Sanitize(Extension):
 				response.content, allowed_mentions={"parse": []}
 			)
 
-			for _ in range(10):
-				await asyncio.sleep(1)
-				if bot_message.embeds:
-					break
-
-			is_valid_response = BotResponseChecker.check_response(
-				bot_message.embeds, response.service
+			await self.response_checker.handle(
+				event, bot_message, response.service, True
 			)
-
-			if isinstance(event.message.author, Member) and is_valid_response:
-				await event.message.suppress_embeds()
-
-			if not is_valid_response:
-				await event.message.remove_reaction("<:Sanitized:1206376642042138724>")
-				await bot_message.delete()
-				response = (
-					"Something went wrong. The service I rely on for fixing \n"
-					f"{response.service.value} links seems to be down. Please try again later!"
-				)
-				error_message = await event.message.reply(
-					embed=Embed(
-						title="Sorry :c", description=response, color="#d1001f"
-					),
-					allowed_mentions={"parse": []},
-				)
-
-				await asyncio.sleep(10)
-				await error_message.delete()
 
 		except Exception:
 			return
@@ -113,26 +89,7 @@ class Sanitize(Extension):
 				response.content, allowed_mentions=AllowedMentions.none()
 			)
 
-			for _ in range(10):
-				await asyncio.sleep(1)
-				if bot_message.embeds:
-					break
-
-			is_valid_response = BotResponseChecker.check_response(
-				bot_message.embeds, response.service
-			)
-			if not is_valid_response:
-				await bot_message.delete()
-				response = (
-					"Something went wrong. The service I rely on for fixing \n"
-					f"{response.service.value} links seems to be down. Please try again later!"
-				)
-				await ctx.send(
-					embed=Embed(
-						title="Sorry :c", description=response, color="#d1001f"
-					),
-					ephemeral=True,
-				)
+			await self.response_checker.handle(ctx, bot_message, response.service)
 
 		except Exception:
 			return
@@ -162,26 +119,7 @@ class Sanitize(Extension):
 				response.content, allowed_mentions=AllowedMentions.none()
 			)
 
-			for _ in range(10):
-				await asyncio.sleep(1)
-				if bot_message.embeds:
-					break
-
-			is_valid_response = BotResponseChecker.check_response(
-				bot_message.embeds, response.service
-			)
-			if not is_valid_response:
-				await bot_message.delete()
-				response = (
-					"Something went wrong. The service I rely on for fixing \n"
-					f"{response.service.value} links seems to be down. Please try again later!"
-				)
-				await ctx.send(
-					embed=Embed(
-						title="Sorry :c", description=response, color="#d1001f"
-					),
-					ephemeral=True,
-				)
+			await self.response_checker.handle(ctx, bot_message, response.service)
 
 		except Exception:
 			return

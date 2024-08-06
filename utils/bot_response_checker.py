@@ -32,6 +32,9 @@ class BotResponseChecker:
 
 		is_valid_response = self._check_response(bot_message.embeds, service_enum)
 
+		if is_valid_response and is_reply:
+			await ctx.message.suppress_embeds()
+
 		if not is_valid_response:
 			await bot_message.delete()
 			response_body = (

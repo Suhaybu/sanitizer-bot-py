@@ -98,7 +98,10 @@ class Sanitize(Extension):
 	@message_context_menu(name="Sanitize")
 	@integration_types(guild=True, user=True)
 	async def context_sanitize(self, ctx: ContextMenuContext):
-		message: Message = ctx.target
+		message = ctx.target
+		if not isinstance(message, Message):
+			return
+
 		try:
 			response = await self.sanitize(user_input=message.content)
 

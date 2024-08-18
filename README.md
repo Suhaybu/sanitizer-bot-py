@@ -1,4 +1,4 @@
-# Sanitizer-bot
+# Sanitizer-bot-py
 
 [![](https://img.shields.io/pypi/v/discord-py-interactions.svg?label=Interactions.py&logo=pypi)](https://github.com/interactions-py/interactions.py)
 ![](https://img.shields.io/badge/Python-3.12+-1081c1?logo=python)
